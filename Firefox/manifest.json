@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Gemini TOC",
+  "version": "1.9",
+  "description": "Adds a Table of Contents to Gemini",
+  "permissions": ["*://gemini.google.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://gemini.google.com/*"],
+      "js": ["code.js"],
+      "css": ["code.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "geminitoctoc@aosl.jb"
+    }
+  }
+}

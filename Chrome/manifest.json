@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Table of Content",
+  "version": "1.9",
+  "description": "Adds a Table of Contents to Gemini",
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [],
+  "host_permissions": [
+    "*://gemini.google.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://gemini.google.com/*"],
+      "js": ["code.js"],
+      "css": ["code.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
